@@ -1,4 +1,5 @@
 import express from 'express';
+import incidentRoutes from "./routes/incident.routes";
 
 const app = express();
 
@@ -16,6 +17,8 @@ app.use(express.json());
 Routes
 ==========================================
 */
+app.use("/api/v1/incidents", incidentRoutes);
+
 
 // Health Check Route
 app.get("/", (req, res) => {
